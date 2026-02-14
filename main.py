@@ -593,7 +593,7 @@ for section in course_list_sections:
     elif section["section_type"] == "MCQ":
         cursor.execute("INSERT INTO section_mcq_question (section_id) VALUES (%s)", (section["section_id"],))
 
-# Mapping course number to course_id, lesson_id, grammar section_id, and vocabulary section_id
+# Mapping course number to course_id, lesson_id, grammar section_id, vocabulary section_id, and speaking section_id
 course_mapping = {
     1: {
         "course_id": "f5058930-99f7-4de4-b7c6-cb1b8b4603c9",
@@ -601,22 +601,26 @@ course_mapping = {
             1: {
                 "lesson_id": "5a12bf28-9a46-4d75-bd30-b9d9a8e5be1f", 
                 "grammar_section_id": "03aafc20-d593-404f-9313-ee1a6fae1e5c",
-                "vocab_section_id": "a18579b1-d283-4b28-ac95-2a71175774ca"
+                "vocab_section_id": "a18579b1-d283-4b28-ac95-2a71175774ca",
+                "speaking_section_id": "0daa2750-207d-4ae9-8e9c-9ac7756ca11d"
             },
             2: {
                 "lesson_id": "d2b065cc-d28b-44e7-bbec-06b49ade7626", 
                 "grammar_section_id": "c04e3552-6f64-41e2-8cfd-a1254c754fcb",
-                "vocab_section_id": "6c4fb5d9-04dc-42d0-92f3-4422c78e3255"
+                "vocab_section_id": "6c4fb5d9-04dc-42d0-92f3-4422c78e3255",
+                "speaking_section_id": "8f2f070a-d319-458a-ae26-2017bee0b416"
             },
             3: {
                 "lesson_id": "ad4a835d-a062-4c5d-aa49-9fbcef9a0986", 
                 "grammar_section_id": "002818a2-8263-4374-8ca2-ecdcbfd1221b",
-                "vocab_section_id": "0ecaf7e7-2409-4c16-9669-daf31d641260"
+                "vocab_section_id": "0ecaf7e7-2409-4c16-9669-daf31d641260",
+                "speaking_section_id": "1b53ba73-1b76-4353-9473-c1ee848af1d3"
             },
             4: {
                 "lesson_id": "9450005d-ed64-42cb-b48c-bb0a68e0deae", 
                 "grammar_section_id": "9a9cf94e-8e67-4fb7-b9fc-5295e1b62ad6",
-                "vocab_section_id": "c0fef146-acef-4d9b-abe6-ee5802e30fd0"
+                "vocab_section_id": "c0fef146-acef-4d9b-abe6-ee5802e30fd0",
+                "speaking_section_id": "d5da1923-141e-46b3-9991-bbf9dfa9beed"
             },
         }
     },
@@ -626,22 +630,26 @@ course_mapping = {
             1: {
                 "lesson_id": "62001bba-532c-4824-bc4c-3ab900ee2f20", 
                 "grammar_section_id": "f1a2b3c4-d5e6-7f89-0a1b-2c3d4e5f6a7b",
-                "vocab_section_id": "a2b3c4d5-e6f7-8901-2a3b-4c5d6e7f8a9b"
+                "vocab_section_id": "a2b3c4d5-e6f7-8901-2a3b-4c5d6e7f8a9b",
+                "speaking_section_id": "b3c4d5e6-f789-0123-4a5b-6c7d8e9f0a1b"
             },
             2: {
                 "lesson_id": "58f30032-db8e-4a34-a328-6d3396c92cdd", 
                 "grammar_section_id": "d5e6f789-0123-4567-8a9b-0c1d2e3f4a5b",
-                "vocab_section_id": "e6f78901-2345-6789-0a1b-2c3d4e5f6a7c"
+                "vocab_section_id": "e6f78901-2345-6789-0a1b-2c3d4e5f6a7c",
+                "speaking_section_id": "f7890123-4567-8901-2a3b-4c5d6e7f8a9c"
             },
             3: {
                 "lesson_id": "20fc11c1-e3a0-498c-ab19-9a30bb76e8d2", 
                 "grammar_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2c",
-                "vocab_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3c"
+                "vocab_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3c",
+                "speaking_section_id": "12345678-9012-3456-7a8b-9c0d1e2f3a4c"
             },
             4: {
                 "lesson_id": "284714fe-3b56-4b16-8d49-a62155b975ae", 
                 "grammar_section_id": "34567890-1234-5678-9a0b-1c2d3e4f5a6c",
-                "vocab_section_id": "45678901-2345-6789-0a1b-2c3d4e5f6a7c"
+                "vocab_section_id": "45678901-2345-6789-0a1b-2c3d4e5f6a7c",
+                "speaking_section_id": "56789012-3456-7890-1a2b-3c4d5e6f7a8c"
             },
         }
     },
@@ -651,22 +659,26 @@ course_mapping = {
             1: {
                 "lesson_id": "d73f36d6-2c6f-421c-a1e8-5231cb87a2c7", 
                 "grammar_section_id": "78901234-5678-9012-3a4b-5c6d7e8f9a0c",
-                "vocab_section_id": "89012345-6789-0123-4a5b-6c7d8e9f0a1d"
+                "vocab_section_id": "89012345-6789-0123-4a5b-6c7d8e9f0a1d",
+                "speaking_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2d"
             },
             2: {
                 "lesson_id": "193be07e-c02b-4714-abbc-3e961a3a57a4", 
                 "grammar_section_id": "12345678-9012-3456-7a8b-9c0d1e2f3a4d",
-                "vocab_section_id": "23456789-0123-4567-8a9b-0c1d2e3f4a5d"
+                "vocab_section_id": "23456789-0123-4567-8a9b-0c1d2e3f4a5d",
+                "speaking_section_id": "34567890-1234-5678-9a0b-1c2d3e4f5a6d"
             },
             3: {
                 "lesson_id": "e180fc7a-e3cc-4f26-bdb1-c8d1f6839b2b", 
                 "grammar_section_id": "56789012-3456-7890-1a2b-3c4d5e6f7a8d",
-                "vocab_section_id": "67890123-4567-8901-2a3b-4c5d6e7f8a9d"
+                "vocab_section_id": "67890123-4567-8901-2a3b-4c5d6e7f8a9d",
+                "speaking_section_id": "78901234-5678-9012-3a4b-5c6d7e8f9a0d"
             },
             4: {
                 "lesson_id": "ba47ddec-dc94-469c-a4b6-f0ec303c592a", 
                 "grammar_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2e",
-                "vocab_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3e"
+                "vocab_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3e",
+                "speaking_section_id": "11234567-8901-2345-6a7b-8c9d0e1f2a3e"
             },
         }
     }
@@ -910,5 +922,78 @@ for vocab in all_vocabulary_data:
         ),
     )
     print(f"✓ Inserted vocabulary: {vocab['word']} → {vocab['translation']} - S3 Key: {vocab['vocab_audio_path']}")
+
+# Auto-generate speaking exercise data from MATERI audio folder (practice line)
+all_speaking_data = []
+
+for course_num in range(1, 4):  # course-1, course-2, course-3
+    course_folder = f"course-{course_num}"
+    course_path = os.path.join(audio_base_path, course_folder)
+    
+    if not os.path.exists(course_path):
+        print(f"Warning: {course_path} does not exist")
+        continue
+    
+    for lesson_num in range(1, 5):  # lesson 1-4 for each course
+        lesson_folder = f"lesson{course_num}-{lesson_num}"
+        lesson_path = os.path.join(course_path, lesson_folder, "practice line")
+        
+        if not os.path.exists(lesson_path):
+            print(f"Warning: {lesson_path} does not exist")
+            continue
+        
+        # Get the speaking section_id for this lesson
+        speaking_section_id = course_mapping[course_num]["lessons"][lesson_num]["speaking_section_id"]
+        course_id = course_mapping[course_num]["course_id"]
+        lesson_id = course_mapping[course_num]["lessons"][lesson_num]["lesson_id"]
+        
+        # Find all audio files in practice line folder
+        speaking_files = sorted([f for f in os.listdir(lesson_path) if f.endswith(".mp3")])
+        
+        for speaking_file in speaking_files:
+            speaking_file_path = os.path.join(lesson_path, speaking_file)
+            
+            # Generate a unique UUID for speaking_id
+            speaking_id = str(uuid.uuid4())
+            
+            # Extract sentence from filename (remove .mp3 extension)
+            sentence = os.path.splitext(speaking_file)[0]
+            
+            # Construct S3 key: course_id/lesson_id/section_id/speaking_id.mp3
+            s3_key = f"{course_id}/{lesson_id}/{speaking_section_id}/{speaking_id}.mp3"
+            
+            # Upload to S3
+            print(f"Uploading {speaking_file_path} to S3 with key: {s3_key}")
+            upload_result = upload_to_s3(speaking_file_path, s3_key)
+            
+            if upload_result:
+                # Add to speaking data
+                all_speaking_data.append({
+                    "speaking_id": speaking_id,
+                    "section_id": speaking_section_id,
+                    "sentence": sentence,
+                    "speaking_audio_path": s3_key,
+                })
+                print(f"✓ Successfully processed: {sentence} (Course {course_num}, Lesson {lesson_num})")
+            else:
+                print(f"✗ Failed to upload {speaking_file_path}")
+
+# Insert all speaking exercise data into database
+speaking_query = """
+INSERT INTO speaking (speaking_id, section_id, sentence, speaking_audio_path)
+VALUES (%s, %s, %s, %s)
+"""
+
+for speaking in all_speaking_data:
+    cursor.execute(
+        speaking_query,
+        (
+            speaking["speaking_id"],
+            speaking["section_id"],
+            speaking["sentence"],
+            speaking["speaking_audio_path"],
+        ),
+    )
+    print(f"✓ Inserted speaking exercise: {speaking['sentence']} - S3 Key: {speaking['speaking_audio_path']}")
 
 connection.commit()
