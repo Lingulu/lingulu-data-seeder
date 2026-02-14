@@ -593,7 +593,7 @@ for section in course_list_sections:
     elif section["section_type"] == "MCQ":
         cursor.execute("INSERT INTO section_mcq_question (section_id) VALUES (%s)", (section["section_id"],))
 
-# Mapping course number to course_id, lesson_id, grammar section_id, vocabulary section_id, and speaking section_id
+# Mapping course number to course_id, lesson_id, grammar section_id, vocabulary section_id, speaking section_id, and MCQ section_id
 course_mapping = {
     1: {
         "course_id": "f5058930-99f7-4de4-b7c6-cb1b8b4603c9",
@@ -602,25 +602,29 @@ course_mapping = {
                 "lesson_id": "5a12bf28-9a46-4d75-bd30-b9d9a8e5be1f", 
                 "grammar_section_id": "03aafc20-d593-404f-9313-ee1a6fae1e5c",
                 "vocab_section_id": "a18579b1-d283-4b28-ac95-2a71175774ca",
-                "speaking_section_id": "0daa2750-207d-4ae9-8e9c-9ac7756ca11d"
+                "speaking_section_id": "0daa2750-207d-4ae9-8e9c-9ac7756ca11d",
+                "mcq_section_id": "6e08ab36-e30d-44fc-855a-8c3e917ad35a"
             },
             2: {
                 "lesson_id": "d2b065cc-d28b-44e7-bbec-06b49ade7626", 
                 "grammar_section_id": "c04e3552-6f64-41e2-8cfd-a1254c754fcb",
                 "vocab_section_id": "6c4fb5d9-04dc-42d0-92f3-4422c78e3255",
-                "speaking_section_id": "8f2f070a-d319-458a-ae26-2017bee0b416"
+                "speaking_section_id": "8f2f070a-d319-458a-ae26-2017bee0b416",
+                "mcq_section_id": "e566d78a-8b02-4498-91d6-bdd861538382"
             },
             3: {
                 "lesson_id": "ad4a835d-a062-4c5d-aa49-9fbcef9a0986", 
                 "grammar_section_id": "002818a2-8263-4374-8ca2-ecdcbfd1221b",
                 "vocab_section_id": "0ecaf7e7-2409-4c16-9669-daf31d641260",
-                "speaking_section_id": "1b53ba73-1b76-4353-9473-c1ee848af1d3"
+                "speaking_section_id": "1b53ba73-1b76-4353-9473-c1ee848af1d3",
+                "mcq_section_id": "e0d5645e-5a67-428b-a580-c10f31d17986"
             },
             4: {
                 "lesson_id": "9450005d-ed64-42cb-b48c-bb0a68e0deae", 
                 "grammar_section_id": "9a9cf94e-8e67-4fb7-b9fc-5295e1b62ad6",
                 "vocab_section_id": "c0fef146-acef-4d9b-abe6-ee5802e30fd0",
-                "speaking_section_id": "d5da1923-141e-46b3-9991-bbf9dfa9beed"
+                "speaking_section_id": "d5da1923-141e-46b3-9991-bbf9dfa9beed",
+                "mcq_section_id": "c05824b4-3c0f-42c0-b846-8d349f39a772"
             },
         }
     },
@@ -631,25 +635,29 @@ course_mapping = {
                 "lesson_id": "62001bba-532c-4824-bc4c-3ab900ee2f20", 
                 "grammar_section_id": "f1a2b3c4-d5e6-7f89-0a1b-2c3d4e5f6a7b",
                 "vocab_section_id": "a2b3c4d5-e6f7-8901-2a3b-4c5d6e7f8a9b",
-                "speaking_section_id": "b3c4d5e6-f789-0123-4a5b-6c7d8e9f0a1b"
+                "speaking_section_id": "b3c4d5e6-f789-0123-4a5b-6c7d8e9f0a1b",
+                "mcq_section_id": "c4d5e6f7-8901-2345-6a7b-8c9d0e1f2a3c"
             },
             2: {
                 "lesson_id": "58f30032-db8e-4a34-a328-6d3396c92cdd", 
                 "grammar_section_id": "d5e6f789-0123-4567-8a9b-0c1d2e3f4a5b",
                 "vocab_section_id": "e6f78901-2345-6789-0a1b-2c3d4e5f6a7c",
-                "speaking_section_id": "f7890123-4567-8901-2a3b-4c5d6e7f8a9c"
+                "speaking_section_id": "f7890123-4567-8901-2a3b-4c5d6e7f8a9c",
+                "mcq_section_id": "89012345-6789-0123-4a5b-6c7d8e9f0a1c"
             },
             3: {
                 "lesson_id": "20fc11c1-e3a0-498c-ab19-9a30bb76e8d2", 
                 "grammar_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2c",
                 "vocab_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3c",
-                "speaking_section_id": "12345678-9012-3456-7a8b-9c0d1e2f3a4c"
+                "speaking_section_id": "12345678-9012-3456-7a8b-9c0d1e2f3a4c",
+                "mcq_section_id": "23456789-0123-4567-8a9b-0c1d2e3f4a5c"
             },
             4: {
                 "lesson_id": "284714fe-3b56-4b16-8d49-a62155b975ae", 
                 "grammar_section_id": "34567890-1234-5678-9a0b-1c2d3e4f5a6c",
                 "vocab_section_id": "45678901-2345-6789-0a1b-2c3d4e5f6a7c",
-                "speaking_section_id": "56789012-3456-7890-1a2b-3c4d5e6f7a8c"
+                "speaking_section_id": "56789012-3456-7890-1a2b-3c4d5e6f7a8c",
+                "mcq_section_id": "67890123-4567-8901-2a3b-4c5d6e7f8a9c"
             },
         }
     },
@@ -660,25 +668,29 @@ course_mapping = {
                 "lesson_id": "d73f36d6-2c6f-421c-a1e8-5231cb87a2c7", 
                 "grammar_section_id": "78901234-5678-9012-3a4b-5c6d7e8f9a0c",
                 "vocab_section_id": "89012345-6789-0123-4a5b-6c7d8e9f0a1d",
-                "speaking_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2d"
+                "speaking_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2d",
+                "mcq_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3d"
             },
             2: {
                 "lesson_id": "193be07e-c02b-4714-abbc-3e961a3a57a4", 
                 "grammar_section_id": "12345678-9012-3456-7a8b-9c0d1e2f3a4d",
                 "vocab_section_id": "23456789-0123-4567-8a9b-0c1d2e3f4a5d",
-                "speaking_section_id": "34567890-1234-5678-9a0b-1c2d3e4f5a6d"
+                "speaking_section_id": "34567890-1234-5678-9a0b-1c2d3e4f5a6d",
+                "mcq_section_id": "45678901-2345-6789-0a1b-2c3d4e5f6a7d"
             },
             3: {
                 "lesson_id": "e180fc7a-e3cc-4f26-bdb1-c8d1f6839b2b", 
                 "grammar_section_id": "56789012-3456-7890-1a2b-3c4d5e6f7a8d",
                 "vocab_section_id": "67890123-4567-8901-2a3b-4c5d6e7f8a9d",
-                "speaking_section_id": "78901234-5678-9012-3a4b-5c6d7e8f9a0d"
+                "speaking_section_id": "78901234-5678-9012-3a4b-5c6d7e8f9a0d",
+                "mcq_section_id": "89012345-6789-0123-4a5b-6c7d8e9f0a1e"
             },
             4: {
                 "lesson_id": "ba47ddec-dc94-469c-a4b6-f0ec303c592a", 
                 "grammar_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2e",
                 "vocab_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3e",
-                "speaking_section_id": "11234567-8901-2345-6a7b-8c9d0e1f2a3e"
+                "speaking_section_id": "11234567-8901-2345-6a7b-8c9d0e1f2a3e",
+                "mcq_section_id": "21234567-8901-2345-6a7b-8c9d0e1f2a3e"
             },
         }
     }
@@ -980,7 +992,7 @@ for course_num in range(1, 4):  # course-1, course-2, course-3
 
 # Insert all speaking exercise data into database
 speaking_query = """
-INSERT INTO speaking (speaking_id, section_id, sentence, speaking_audio_path)
+INSERT INTO speakings (speaking_id, section_id, sentence, speaking_audio_path)
 VALUES (%s, %s, %s, %s)
 """
 
@@ -995,5 +1007,168 @@ for speaking in all_speaking_data:
         ),
     )
     print(f"✓ Inserted speaking exercise: {speaking['sentence']} - S3 Key: {speaking['speaking_audio_path']}")
+
+# Function to parse MCQ questions from text file
+def parse_mcq_file(file_path):
+    """
+    Parse MCQ file and return list of questions with options and correct answer.
+    Format expected:
+    Question text
+    a) Option A
+    b) Option B
+    c) Option C
+    Answer: b
+    """
+    questions = []
+    
+    with open(file_path, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+        
+        # Skip empty lines
+        if not line:
+            i += 1
+            continue
+        
+        # Check if this line is a question (not starting with a), b), c), etc. and not "Answer:")
+        if not line.startswith(('a)', 'b)', 'c)', 'd)', 'e)', 'f)')) and not line.startswith('Answer:'):
+            question_text = line
+            options = []
+            correct_answer = None
+            
+            # Read options
+            i += 1
+            while i < len(lines):
+                option_line = lines[i].strip()
+                
+                if not option_line:
+                    i += 1
+                    continue
+                
+                # Check if it's an option
+                if option_line and len(option_line) > 2 and option_line[1] == ')':
+                    option_letter = option_line[0].lower()
+                    option_text = option_line[3:].strip()  # Remove "a) " part
+                    options.append({
+                        'letter': option_letter,
+                        'text': option_text
+                    })
+                    i += 1
+                # Check if it's the answer line
+                elif option_line.startswith('Answer:'):
+                    correct_answer = option_line.split(':')[1].strip().lower()
+                    i += 1
+                    break
+                else:
+                    break
+            
+            # Add question if we have all components
+            if question_text and options and correct_answer:
+                questions.append({
+                    'question': question_text,
+                    'options': options,
+                    'correct_answer': correct_answer
+                })
+        else:
+            i += 1
+    
+    return questions
+
+# Auto-generate MCQ data from MATERI pilihan-ganda folder
+all_mcq_questions = []
+all_mcq_options = []
+mcq_base_path = "MATERI/pilihan-ganda"
+
+for course_num in range(1, 4):  # course-1, course-2, course-3
+    course_folder = f"course-{course_num}"
+    course_path = os.path.join(mcq_base_path, course_folder)
+    
+    if not os.path.exists(course_path):
+        print(f"Warning: {course_path} does not exist")
+        continue
+    
+    for lesson_num in range(1, 5):  # lesson 1-4 for each course
+        lesson_folder = f"lesson{course_num}-{lesson_num}"
+        lesson_path = os.path.join(course_path, lesson_folder)
+        
+        if not os.path.exists(lesson_path):
+            print(f"Warning: {lesson_path} does not exist")
+            continue
+        
+        # Get the MCQ section_id for this lesson
+        mcq_section_id = course_mapping[course_num]["lessons"][lesson_num]["mcq_section_id"]
+        
+        # Read question.txt file
+        question_file = os.path.join(lesson_path, "question.txt")
+        
+        if not os.path.exists(question_file):
+            print(f"Warning: {question_file} does not exist")
+            continue
+        
+        print(f"Processing MCQ file: {question_file}")
+        questions = parse_mcq_file(question_file)
+        
+        for q in questions:
+            # Generate a unique UUID for question_id
+            question_id = str(uuid.uuid4())
+            
+            # Add to MCQ questions data
+            all_mcq_questions.append({
+                "question_id": question_id,
+                "section_id": mcq_section_id,
+                "question_text": q['question'],
+            })
+            
+            # Add options for this question
+            for opt in q['options']:
+                option_id = str(uuid.uuid4())
+                is_correct = (opt['letter'] == q['correct_answer'])
+                
+                all_mcq_options.append({
+                    "option_id": option_id,
+                    "question_id": question_id,
+                    "option_text": opt['text'],
+                    "is_correct": is_correct
+                })
+            
+            print(f"✓ Parsed question: {q['question'][:50]}... with {len(q['options'])} options (Course {course_num}, Lesson {lesson_num})")
+
+# Insert all MCQ questions into database
+mcq_question_query = """
+INSERT INTO mcq_questions (question_id, section_id, question_text)
+VALUES (%s, %s, %s)
+"""
+
+for question in all_mcq_questions:
+    cursor.execute(
+        mcq_question_query,
+        (
+            question["question_id"],
+            question["section_id"],
+            question["question_text"],
+        ),
+    )
+    print(f"✓ Inserted MCQ question: {question['question_text'][:50]}...")
+
+# Insert all MCQ options into database
+mcq_option_query = """
+INSERT INTO mcq_options (option_id, question_id, option_text, is_correct)
+VALUES (%s, %s, %s, %s)
+"""
+
+for option in all_mcq_options:
+    cursor.execute(
+        mcq_option_query,
+        (
+            option["option_id"],
+            option["question_id"],
+            option["option_text"],
+            option["is_correct"],
+        ),
+    )
+    print(f"✓ Inserted MCQ option: {option['option_text']} ({'CORRECT' if option['is_correct'] else 'incorrect'})")
 
 connection.commit()

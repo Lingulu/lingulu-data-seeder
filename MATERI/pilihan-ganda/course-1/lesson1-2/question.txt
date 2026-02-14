@@ -1,0 +1,50 @@
+___ is a book (near).
+a) This
+b) That
+c) These
+Answer: a
+___ is a house (far).
+a) This
+b) That
+c) It
+Answer: b
+This is ___ bag.
+a) I
+b) my
+c) me
+Answer: b
+That is a ___.
+a) house
+b) water
+c) happy
+Answer: a
+This ___ a pen.
+a) are
+b) is
+c) am
+Answer: b
+That is ___ phone.
+a) my
+b) I
+c) me
+Answer: a
+This is ___ food.
+a) my
+b) am
+c) are
+Answer: a
+That ___ a table.
+a) is
+b) are
+c) am
+Answer: a
+This is a ___.
+a) pen
+b) eat
+c) happy
+Answer: a
+That is my ___.
+a) bag
+b) drinks
+c) read
+Answer: a
