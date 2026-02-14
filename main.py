@@ -593,33 +593,81 @@ for section in course_list_sections:
     elif section["section_type"] == "MCQ":
         cursor.execute("INSERT INTO section_mcq_question (section_id) VALUES (%s)", (section["section_id"],))
 
-# Mapping course number to course_id, lesson_id, and grammar section_id
+# Mapping course number to course_id, lesson_id, grammar section_id, and vocabulary section_id
 course_mapping = {
     1: {
         "course_id": "f5058930-99f7-4de4-b7c6-cb1b8b4603c9",
         "lessons": {
-            1: {"lesson_id": "5a12bf28-9a46-4d75-bd30-b9d9a8e5be1f", "grammar_section_id": "03aafc20-d593-404f-9313-ee1a6fae1e5c"},
-            2: {"lesson_id": "d2b065cc-d28b-44e7-bbec-06b49ade7626", "grammar_section_id": "c04e3552-6f64-41e2-8cfd-a1254c754fcb"},
-            3: {"lesson_id": "ad4a835d-a062-4c5d-aa49-9fbcef9a0986", "grammar_section_id": "002818a2-8263-4374-8ca2-ecdcbfd1221b"},
-            4: {"lesson_id": "9450005d-ed64-42cb-b48c-bb0a68e0deae", "grammar_section_id": "9a9cf94e-8e67-4fb7-b9fc-5295e1b62ad6"},
+            1: {
+                "lesson_id": "5a12bf28-9a46-4d75-bd30-b9d9a8e5be1f", 
+                "grammar_section_id": "03aafc20-d593-404f-9313-ee1a6fae1e5c",
+                "vocab_section_id": "a18579b1-d283-4b28-ac95-2a71175774ca"
+            },
+            2: {
+                "lesson_id": "d2b065cc-d28b-44e7-bbec-06b49ade7626", 
+                "grammar_section_id": "c04e3552-6f64-41e2-8cfd-a1254c754fcb",
+                "vocab_section_id": "6c4fb5d9-04dc-42d0-92f3-4422c78e3255"
+            },
+            3: {
+                "lesson_id": "ad4a835d-a062-4c5d-aa49-9fbcef9a0986", 
+                "grammar_section_id": "002818a2-8263-4374-8ca2-ecdcbfd1221b",
+                "vocab_section_id": "0ecaf7e7-2409-4c16-9669-daf31d641260"
+            },
+            4: {
+                "lesson_id": "9450005d-ed64-42cb-b48c-bb0a68e0deae", 
+                "grammar_section_id": "9a9cf94e-8e67-4fb7-b9fc-5295e1b62ad6",
+                "vocab_section_id": "c0fef146-acef-4d9b-abe6-ee5802e30fd0"
+            },
         }
     },
     2: {
         "course_id": "90e60335-0fa8-4e6f-8849-6111c1a39499",
         "lessons": {
-            1: {"lesson_id": "62001bba-532c-4824-bc4c-3ab900ee2f20", "grammar_section_id": "f1a2b3c4-d5e6-7f89-0a1b-2c3d4e5f6a7b"},
-            2: {"lesson_id": "58f30032-db8e-4a34-a328-6d3396c92cdd", "grammar_section_id": "d5e6f789-0123-4567-8a9b-0c1d2e3f4a5b"},
-            3: {"lesson_id": "20fc11c1-e3a0-498c-ab19-9a30bb76e8d2", "grammar_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2c"},
-            4: {"lesson_id": "284714fe-3b56-4b16-8d49-a62155b975ae", "grammar_section_id": "34567890-1234-5678-9a0b-1c2d3e4f5a6c"},
+            1: {
+                "lesson_id": "62001bba-532c-4824-bc4c-3ab900ee2f20", 
+                "grammar_section_id": "f1a2b3c4-d5e6-7f89-0a1b-2c3d4e5f6a7b",
+                "vocab_section_id": "a2b3c4d5-e6f7-8901-2a3b-4c5d6e7f8a9b"
+            },
+            2: {
+                "lesson_id": "58f30032-db8e-4a34-a328-6d3396c92cdd", 
+                "grammar_section_id": "d5e6f789-0123-4567-8a9b-0c1d2e3f4a5b",
+                "vocab_section_id": "e6f78901-2345-6789-0a1b-2c3d4e5f6a7c"
+            },
+            3: {
+                "lesson_id": "20fc11c1-e3a0-498c-ab19-9a30bb76e8d2", 
+                "grammar_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2c",
+                "vocab_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3c"
+            },
+            4: {
+                "lesson_id": "284714fe-3b56-4b16-8d49-a62155b975ae", 
+                "grammar_section_id": "34567890-1234-5678-9a0b-1c2d3e4f5a6c",
+                "vocab_section_id": "45678901-2345-6789-0a1b-2c3d4e5f6a7c"
+            },
         }
     },
     3: {
         "course_id": "bcb0f085-528b-434c-85e8-c857394bae87",
         "lessons": {
-            1: {"lesson_id": "d73f36d6-2c6f-421c-a1e8-5231cb87a2c7", "grammar_section_id": "78901234-5678-9012-3a4b-5c6d7e8f9a0c"},
-            2: {"lesson_id": "193be07e-c02b-4714-abbc-3e961a3a57a4", "grammar_section_id": "12345678-9012-3456-7a8b-9c0d1e2f3a4d"},
-            3: {"lesson_id": "e180fc7a-e3cc-4f26-bdb1-c8d1f6839b2b", "grammar_section_id": "56789012-3456-7890-1a2b-3c4d5e6f7a8d"},
-            4: {"lesson_id": "ba47ddec-dc94-469c-a4b6-f0ec303c592a", "grammar_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2e"},
+            1: {
+                "lesson_id": "d73f36d6-2c6f-421c-a1e8-5231cb87a2c7", 
+                "grammar_section_id": "78901234-5678-9012-3a4b-5c6d7e8f9a0c",
+                "vocab_section_id": "89012345-6789-0123-4a5b-6c7d8e9f0a1d"
+            },
+            2: {
+                "lesson_id": "193be07e-c02b-4714-abbc-3e961a3a57a4", 
+                "grammar_section_id": "12345678-9012-3456-7a8b-9c0d1e2f3a4d",
+                "vocab_section_id": "23456789-0123-4567-8a9b-0c1d2e3f4a5d"
+            },
+            3: {
+                "lesson_id": "e180fc7a-e3cc-4f26-bdb1-c8d1f6839b2b", 
+                "grammar_section_id": "56789012-3456-7890-1a2b-3c4d5e6f7a8d",
+                "vocab_section_id": "67890123-4567-8901-2a3b-4c5d6e7f8a9d"
+            },
+            4: {
+                "lesson_id": "ba47ddec-dc94-469c-a4b6-f0ec303c592a", 
+                "grammar_section_id": "90123456-7890-1234-5a6b-7c8d9e0f1a2e",
+                "vocab_section_id": "01234567-8901-2345-6a7b-8c9d0e1f2a3e"
+            },
         }
     }
 }
@@ -691,7 +739,7 @@ for course_num in range(1, 4):
 
 # Insert all grammar data into database
 grammar_query = """
-INSERT INTO grammar (grammar_id, section_id, title, markdown_file_path)
+INSERT INTO grammars (grammar_id, section_id, title, markdown_file_path)
 VALUES (%s, %s, %s, %s)
 """
 
@@ -706,5 +754,161 @@ for grammar in all_grammar_data:
         ),
     )
     print(f"✓ Inserted grammar: {grammar['title']} - S3 Key: {grammar['markdown_file_path']}")
+
+print("\n=== VOCABULARY PROCESSING ===\n")
+
+# English to Indonesian translation dictionary
+translation_dict = {
+    # Course 1 - Beginner
+    "I": "Saya", "You": "Kamu/Anda", "He": "Dia (laki-laki)", "She": "Dia (perempuan)",
+    "Hello": "Halo", "Name": "Nama", "Student": "Siswa/Pelajar", "Teacher": "Guru",
+    "Friend": "Teman", "Happy": "Senang/Bahagia",
+    "This": "Ini", "That": "Itu", "Book": "Buku", "Pen": "Pulpen",
+    "Table": "Meja", "Chair": "Kursi", "My": "Milikku", "Your": "Milikmu",
+    "His": "Miliknya (laki-laki)", "Her": "Miliknya (perempuan)",
+    "Bag": "Tas", "Door": "Pintu", "Food": "Makanan", "House": "Rumah",
+    "Phone": "Telepon", "Water": "Air",
+    "Eat": "Makan", "Sleep": "Tidur", "Study": "Belajar", "Work": "Bekerja",
+    "Play": "Bermain", "Every": "Setiap", "Day": "Hari", "Night": "Malam",
+    "Morning": "Pagi", "Afternoon": "Siang/Sore",
+    "Drink": "Minum", "Go": "Pergi", "Read": "Membaca", "Run": "Berlari", 
+    "Walk": "Berjalan", "Write": "Menulis",
+    "Big": "Besar", "Small": "Kecil", "Good": "Baik", "Bad": "Buruk",
+    "Beautiful": "Cantik", "Beautifull": "Cantik", "Tall": "Tinggi", "Short": "Pendek", "Old": "Tua",
+    "Young": "Muda", "New": "Baru", "Fast": "Cepat", "Slow": "Lambat",
+    "Handsome": "Tampan", "Kind": "Baik hati", "Smart": "Pintar",
+    
+    # Course 2 - Intermediate
+    "Yesterday": "Kemarin", "Last": "Terakhir", "Week": "Minggu", "Month": "Bulan",
+    "Year": "Tahun", "Ago": "Yang lalu", "Was": "Adalah (lampau)", "Were": "Adalah (lampau jamak)",
+    "Went": "Pergi (lampau)", "Came": "Datang (lampau)", "Bought": "Membeli (lampau)",
+    "Forgot": "Lupa (lampau)", "Visited": "Mengunjungi (lampau)", "Received": "Menerima (lampau)",
+    "Last week": "Minggu lalu", "Meeting": "Pertemuan", "Tired": "Lelah",
+    "Will": "Akan", "Going": "Akan pergi", "Plan": "Rencana", "Future": "Masa depan",
+    "Tomorrow": "Besok", "Next": "Berikutnya", "Soon": "Segera", "Later": "Nanti",
+    "Promise": "Janji", "Hope": "Harapan", "Attend": "Hadir/Menghadiri", "Finish": "Selesai",
+    "Join": "Bergabung", "Next month": "Bulan depan", "Probably": "Mungkin", "Tonight": "Malam ini",
+    "Tonight ": "Malam ini", "Travel": "Bepergian",
+    "Now": "Sekarang", "Currently": "Saat ini", "Right": "Benar/Tepat", "Moment": "Momen",
+    "Busy": "Sibuk", "Watching": "Menonton", "Reading": "Membaca", "Writing": "Menulis",
+    "Running": "Berlari", "Swimming": "Berenang",
+    "At the moment": "Saat ini", "Cooking": "Memasak", "Driving": "Mengemudi",
+    "Improving": "Meningkatkan", "Listening": "Mendengarkan", "Project": "Proyek",
+    "Right now": "Sekarang juga", "Right now ": "Sekarang juga", "Waiting": "Menunggu",
+    "Waiting ": "Menunggu", "Working": "Bekerja",
+    "Better": "Lebih baik", "Worse": "Lebih buruk", "Bigger": "Lebih besar", "Smaller": "Lebih kecil",
+    "Faster": "Lebih cepat", "Slower": "Lebih lambat", "Best": "Terbaik", "Worst": "Terburuk",
+    "Biggest": "Terbesar", "Smallest": "Terkecil", "Than": "Daripada", "Most": "Paling",
+    "Cheap": "Murah", "Difficult": "Sulit", "Easy": "Mudah", "Expensive": "Mahal",
+    "Heavy": "Berat", "Important": "Penting",
+    
+    # Course 3 - Advanced
+    "Already": "Sudah", "Yet": "Belum", "Since": "Sejak", "Recently": "Baru-baru ini",
+    "Accomplished": "Tercapai", "Opportunity": "Kesempatan", "Duration": "Durasi", 
+    "Deadline": "Tenggat waktu", "Consequence": "Konsekuensi", "Several": "Beberapa",
+    "If": "Jika", "Would": "Akan", "Could": "Bisa", "Wish": "Berharap",
+    "Dream": "Mimpi", "Imagine": "Membayangkan", "Suppose": "Anggaplah", "Reality": "Kenyataan",
+    "Condition": "Kondisi", "Situation": "Situasi",
+    "Made": "Dibuat", "Done": "Dilakukan", "Written": "Ditulis", "Spoken": "Diucapkan",
+    "Built": "Dibangun", "Designed": "Dirancang", "Created": "Diciptakan", "Produced": "Diproduksi",
+    "Published": "Diterbitkan", "Invented": "Diciptakan",
+    "Must": "Harus", "Can't": "Tidak bisa", "Certain": "Pasti", "Impossible": "Mustahil",
+    "Perhaps": "Mungkin", "Obviously": "Jelas", "Realize": "Menyadari", "Logic": "Logika",
+    "Evidence": "Bukti", "Conclusion": "Kesimpulan", "Exhausted": "Kelelahan", 
+    "Misunderstanding": "Kesalahpahaman",
+}
+
+# Function to get translation (fallback to word itself if not in dictionary)
+def get_translation(word):
+    # Check exact match first
+    if word in translation_dict:
+        return translation_dict[word]
+    
+    # Check case-insensitive match
+    for key, value in translation_dict.items():
+        if key.lower() == word.lower():
+            return value
+    
+    # Fallback: return the word itself with note
+    return f"{word} (perlu diterjemahkan)"
+
+# Auto-generate vocabulary data from MATERI audio folder
+all_vocabulary_data = []
+audio_base_path = "MATERI/audio-materi/courses"
+
+for course_num in range(1, 4):  # course-1, course-2, course-3
+    course_folder = f"course-{course_num}"
+    course_path = os.path.join(audio_base_path, course_folder)
+    
+    if not os.path.exists(course_path):
+        print(f"Warning: {course_path} does not exist")
+        continue
+    
+    for lesson_num in range(1, 5):  # lesson 1-4 for each course
+        lesson_folder = f"lesson{course_num}-{lesson_num}"
+        lesson_path = os.path.join(course_path, lesson_folder, "vocab")
+        
+        if not os.path.exists(lesson_path):
+            print(f"Warning: {lesson_path} does not exist")
+            continue
+        
+        # Get the vocabulary section_id for this lesson
+        vocab_section_id = course_mapping[course_num]["lessons"][lesson_num]["vocab_section_id"]
+        course_id = course_mapping[course_num]["course_id"]
+        lesson_id = course_mapping[course_num]["lessons"][lesson_num]["lesson_id"]
+        
+        # Find all audio files in vocab folder
+        vocab_files = sorted([f for f in os.listdir(lesson_path) if f.endswith(".mp3")])
+        
+        for vocab_file in vocab_files:
+            vocab_file_path = os.path.join(lesson_path, vocab_file)
+            
+            # Generate a unique UUID for vocab_id
+            vocab_id = str(uuid.uuid4())
+            
+            # Extract word from filename (remove .mp3 extension)
+            word = os.path.splitext(vocab_file)[0]
+            
+            # Get translation
+            translation = get_translation(word)
+            
+            # Construct S3 key: course_id/lesson_id/section_id/vocab_id.mp3
+            s3_key = f"{course_id}/{lesson_id}/{vocab_section_id}/{vocab_id}.mp3"
+            
+            # Upload to S3
+            print(f"Uploading {vocab_file_path} to S3 with key: {s3_key}")
+            upload_result = upload_to_s3(vocab_file_path, s3_key)
+            
+            if upload_result:
+                # Add to vocabulary data
+                all_vocabulary_data.append({
+                    "vocab_id": vocab_id,
+                    "section_id": vocab_section_id,
+                    "word": word,
+                    "translation": translation,
+                    "vocab_audio_path": s3_key,
+                })
+                print(f"✓ Successfully processed: {word} → {translation} (Course {course_num}, Lesson {lesson_num})")
+            else:
+                print(f"✗ Failed to upload {vocab_file_path}")
+
+# Insert all vocabulary data into database
+vocabulary_query = """
+INSERT INTO vocabularies (vocab_id, section_id, word, translation, vocab_audio_path)
+VALUES (%s, %s, %s, %s, %s)
+"""
+
+for vocab in all_vocabulary_data:
+    cursor.execute(
+        vocabulary_query,
+        (
+            vocab["vocab_id"],
+            vocab["section_id"],
+            vocab["word"],
+            vocab["translation"],
+            vocab["vocab_audio_path"],
+        ),
+    )
+    print(f"✓ Inserted vocabulary: {vocab['word']} → {vocab['translation']} - S3 Key: {vocab['vocab_audio_path']}")
 
 connection.commit()
