@@ -743,7 +743,7 @@ for course_num in range(1, 4):
             title = extract_title_from_markdown(grammar_file_path)
             
             # Construct S3 key: course_id/lesson_id/section_id/grammar_id.md
-            s3_key = f"{course_id}/{lesson_id}/{grammar_section_id}/{grammar_id}.md"
+            s3_key = f"course/{course_id}/{lesson_id}/{grammar_section_id}/{grammar_id}.md"
             
             # Upload to S3
             print(f"Uploading {grammar_file_path} to S3 with key: {s3_key}")
@@ -897,7 +897,7 @@ for course_num in range(1, 4):  # course-1, course-2, course-3
             translation = get_translation(word)
             
             # Construct S3 key: course_id/lesson_id/section_id/vocab_id.mp3
-            s3_key = f"{course_id}/{lesson_id}/{vocab_section_id}/{vocab_id}.mp3"
+            s3_key = f"course/{course_id}/{lesson_id}/{vocab_section_id}/{vocab_id}.mp3"
             
             # Upload to S3
             print(f"Uploading {vocab_file_path} to S3 with key: {s3_key}")
@@ -972,7 +972,7 @@ for course_num in range(1, 4):  # course-1, course-2, course-3
             sentence = os.path.splitext(speaking_file)[0]
             
             # Construct S3 key: course_id/lesson_id/section_id/speaking_id.mp3
-            s3_key = f"{course_id}/{lesson_id}/{speaking_section_id}/{speaking_id}.mp3"
+            s3_key = f"course/{course_id}/{lesson_id}/{speaking_section_id}/{speaking_id}.mp3"
             
             # Upload to S3
             print(f"Uploading {speaking_file_path} to S3 with key: {s3_key}")
