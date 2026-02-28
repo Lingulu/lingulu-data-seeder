@@ -1,2 +1,3 @@
 .env
 env/
+ec2-lingulu-seeder.pem
